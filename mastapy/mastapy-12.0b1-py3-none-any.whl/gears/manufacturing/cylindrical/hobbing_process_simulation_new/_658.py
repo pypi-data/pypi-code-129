@@ -1,0 +1,116 @@
+﻿"""_658.py
+
+HobbingProcessLeadCalculation
+"""
+
+
+from mastapy.utility_gui.charts import (
+    _1815, _1805, _1810, _1812
+)
+from mastapy._internal import constructor
+from mastapy._internal.cast_exception import CastException
+from mastapy._internal.implicit import overridable
+from mastapy._internal.overridable_constructor import _unpack_overridable
+from mastapy.gears.manufacturing.cylindrical.hobbing_process_simulation_new import _650, _656
+from mastapy._internal.python_net import python_net_import
+
+_HOBBING_PROCESS_LEAD_CALCULATION = python_net_import('SMT.MastaAPI.Gears.Manufacturing.Cylindrical.HobbingProcessSimulationNew', 'HobbingProcessLeadCalculation')
+
+
+__docformat__ = 'restructuredtext en'
+__all__ = ('HobbingProcessLeadCalculation',)
+
+
+class HobbingProcessLeadCalculation(_656.HobbingProcessCalculation):
+    """HobbingProcessLeadCalculation
+
+    This is a mastapy class.
+    """
+
+    TYPE = _HOBBING_PROCESS_LEAD_CALCULATION
+
+    __hash__ = None
+
+    def __init__(self, instance_to_wrap: 'HobbingProcessLeadCalculation.TYPE'):
+        super().__init__(instance_to_wrap)
+        self._freeze()
+
+    @property
+    def left_flank_lead_modification_chart(self) -> '_1815.TwoDChartDefinition':
+        """TwoDChartDefinition: 'LeftFlankLeadModificationChart' is the original name of this property.
+
+        Note:
+            This property is readonly.
+        """
+
+        temp = self.wrapped.LeftFlankLeadModificationChart
+        if _1815.TwoDChartDefinition.TYPE not in temp.__class__.__mro__:
+            raise CastException('Failed to cast left_flank_lead_modification_chart to TwoDChartDefinition. Expected: {}.'.format(temp.__class__.__qualname__))
+
+        type_ = temp.GetType()
+        return constructor.new(type_.Namespace, type_.Name)(temp) if temp is not None else None
+
+    @property
+    def number_of_lead_bands(self) -> 'int':
+        """int: 'NumberOfLeadBands' is the original name of this property."""
+
+        temp = self.wrapped.NumberOfLeadBands
+        return temp
+
+    @number_of_lead_bands.setter
+    def number_of_lead_bands(self, value: 'int'):
+        self.wrapped.NumberOfLeadBands = int(value) if value else 0
+
+    @property
+    def radius_for_lead_modification_calculation(self) -> 'overridable.Overridable_float':
+        """overridable.Overridable_float: 'RadiusForLeadModificationCalculation' is the original name of this property."""
+
+        temp = self.wrapped.RadiusForLeadModificationCalculation
+        return constructor.new_from_mastapy_type(overridable.Overridable_float)(temp) if temp is not None else None
+
+    @radius_for_lead_modification_calculation.setter
+    def radius_for_lead_modification_calculation(self, value: 'overridable.Overridable_float.implicit_type()'):
+        wrapper_type = overridable.Overridable_float.wrapper_type()
+        enclosed_type = overridable.Overridable_float.implicit_type()
+        value, is_overridden = _unpack_overridable(value)
+        value = wrapper_type[enclosed_type](enclosed_type(value) if value is not None else 0.0, is_overridden)
+        self.wrapped.RadiusForLeadModificationCalculation = value
+
+    @property
+    def right_flank_lead_modification_chart(self) -> '_1815.TwoDChartDefinition':
+        """TwoDChartDefinition: 'RightFlankLeadModificationChart' is the original name of this property.
+
+        Note:
+            This property is readonly.
+        """
+
+        temp = self.wrapped.RightFlankLeadModificationChart
+        if _1815.TwoDChartDefinition.TYPE not in temp.__class__.__mro__:
+            raise CastException('Failed to cast right_flank_lead_modification_chart to TwoDChartDefinition. Expected: {}.'.format(temp.__class__.__qualname__))
+
+        type_ = temp.GetType()
+        return constructor.new(type_.Namespace, type_.Name)(temp) if temp is not None else None
+
+    @property
+    def left_flank(self) -> '_650.CalculateLeadDeviationAccuracy':
+        """CalculateLeadDeviationAccuracy: 'LeftFlank' is the original name of this property.
+
+        Note:
+            This property is readonly.
+        """
+
+        temp = self.wrapped.LeftFlank
+        type_ = temp.GetType()
+        return constructor.new(type_.Namespace, type_.Name)(temp) if temp is not None else None
+
+    @property
+    def right_flank(self) -> '_650.CalculateLeadDeviationAccuracy':
+        """CalculateLeadDeviationAccuracy: 'RightFlank' is the original name of this property.
+
+        Note:
+            This property is readonly.
+        """
+
+        temp = self.wrapped.RightFlank
+        type_ = temp.GetType()
+        return constructor.new(type_.Namespace, type_.Name)(temp) if temp is not None else None

@@ -1,0 +1,125 @@
+﻿"""_5942.py
+
+BevelGearMeshHarmonicAnalysisOfSingleExcitation
+"""
+
+
+from mastapy.system_model.connections_and_sockets.gears import (
+    _2243, _2241, _2263, _2265,
+    _2267, _2271
+)
+from mastapy._internal import constructor
+from mastapy._internal.cast_exception import CastException
+from mastapy.system_model.analyses_and_results.harmonic_analyses_single_excitation import _5930
+from mastapy._internal.python_net import python_net_import
+
+_BEVEL_GEAR_MESH_HARMONIC_ANALYSIS_OF_SINGLE_EXCITATION = python_net_import('SMT.MastaAPI.SystemModel.AnalysesAndResults.HarmonicAnalysesSingleExcitation', 'BevelGearMeshHarmonicAnalysisOfSingleExcitation')
+
+
+__docformat__ = 'restructuredtext en'
+__all__ = ('BevelGearMeshHarmonicAnalysisOfSingleExcitation',)
+
+
+class BevelGearMeshHarmonicAnalysisOfSingleExcitation(_5930.AGMAGleasonConicalGearMeshHarmonicAnalysisOfSingleExcitation):
+    """BevelGearMeshHarmonicAnalysisOfSingleExcitation
+
+    This is a mastapy class.
+    """
+
+    TYPE = _BEVEL_GEAR_MESH_HARMONIC_ANALYSIS_OF_SINGLE_EXCITATION
+
+    __hash__ = None
+
+    def __init__(self, instance_to_wrap: 'BevelGearMeshHarmonicAnalysisOfSingleExcitation.TYPE'):
+        super().__init__(instance_to_wrap)
+        self._freeze()
+
+    @property
+    def connection_design(self) -> '_2243.BevelGearMesh':
+        """BevelGearMesh: 'ConnectionDesign' is the original name of this property.
+
+        Note:
+            This property is readonly.
+        """
+
+        temp = self.wrapped.ConnectionDesign
+        if _2243.BevelGearMesh.TYPE not in temp.__class__.__mro__:
+            raise CastException('Failed to cast connection_design to BevelGearMesh. Expected: {}.'.format(temp.__class__.__qualname__))
+
+        type_ = temp.GetType()
+        return constructor.new(type_.Namespace, type_.Name)(temp) if temp is not None else None
+
+    @property
+    def connection_design_of_type_bevel_differential_gear_mesh(self) -> '_2241.BevelDifferentialGearMesh':
+        """BevelDifferentialGearMesh: 'ConnectionDesign' is the original name of this property.
+
+        Note:
+            This property is readonly.
+        """
+
+        temp = self.wrapped.ConnectionDesign
+        if _2241.BevelDifferentialGearMesh.TYPE not in temp.__class__.__mro__:
+            raise CastException('Failed to cast connection_design to BevelDifferentialGearMesh. Expected: {}.'.format(temp.__class__.__qualname__))
+
+        type_ = temp.GetType()
+        return constructor.new(type_.Namespace, type_.Name)(temp) if temp is not None else None
+
+    @property
+    def connection_design_of_type_spiral_bevel_gear_mesh(self) -> '_2263.SpiralBevelGearMesh':
+        """SpiralBevelGearMesh: 'ConnectionDesign' is the original name of this property.
+
+        Note:
+            This property is readonly.
+        """
+
+        temp = self.wrapped.ConnectionDesign
+        if _2263.SpiralBevelGearMesh.TYPE not in temp.__class__.__mro__:
+            raise CastException('Failed to cast connection_design to SpiralBevelGearMesh. Expected: {}.'.format(temp.__class__.__qualname__))
+
+        type_ = temp.GetType()
+        return constructor.new(type_.Namespace, type_.Name)(temp) if temp is not None else None
+
+    @property
+    def connection_design_of_type_straight_bevel_diff_gear_mesh(self) -> '_2265.StraightBevelDiffGearMesh':
+        """StraightBevelDiffGearMesh: 'ConnectionDesign' is the original name of this property.
+
+        Note:
+            This property is readonly.
+        """
+
+        temp = self.wrapped.ConnectionDesign
+        if _2265.StraightBevelDiffGearMesh.TYPE not in temp.__class__.__mro__:
+            raise CastException('Failed to cast connection_design to StraightBevelDiffGearMesh. Expected: {}.'.format(temp.__class__.__qualname__))
+
+        type_ = temp.GetType()
+        return constructor.new(type_.Namespace, type_.Name)(temp) if temp is not None else None
+
+    @property
+    def connection_design_of_type_straight_bevel_gear_mesh(self) -> '_2267.StraightBevelGearMesh':
+        """StraightBevelGearMesh: 'ConnectionDesign' is the original name of this property.
+
+        Note:
+            This property is readonly.
+        """
+
+        temp = self.wrapped.ConnectionDesign
+        if _2267.StraightBevelGearMesh.TYPE not in temp.__class__.__mro__:
+            raise CastException('Failed to cast connection_design to StraightBevelGearMesh. Expected: {}.'.format(temp.__class__.__qualname__))
+
+        type_ = temp.GetType()
+        return constructor.new(type_.Namespace, type_.Name)(temp) if temp is not None else None
+
+    @property
+    def connection_design_of_type_zerol_bevel_gear_mesh(self) -> '_2271.ZerolBevelGearMesh':
+        """ZerolBevelGearMesh: 'ConnectionDesign' is the original name of this property.
+
+        Note:
+            This property is readonly.
+        """
+
+        temp = self.wrapped.ConnectionDesign
+        if _2271.ZerolBevelGearMesh.TYPE not in temp.__class__.__mro__:
+            raise CastException('Failed to cast connection_design to ZerolBevelGearMesh. Expected: {}.'.format(temp.__class__.__qualname__))
+
+        type_ = temp.GetType()
+        return constructor.new(type_.Namespace, type_.Name)(temp) if temp is not None else None

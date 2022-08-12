@@ -1,0 +1,3 @@
+"""
+The main library module
+"""

@@ -1,0 +1,1 @@
+from .slopping import crop
